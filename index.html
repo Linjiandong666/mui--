@@ -1,0 +1,333 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>练习mui</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+		<link rel="stylesheet" type="text/css" href="css/mui.picker.min.css"/>
+		<script src="js/mui.picker.min.js"></script>
+	</head>
+	<style type="text/css">
+		.mui-search::before{
+			top: 10px;
+		}
+			
+		.mui-search .mui-placeholder{
+			top:5px;
+		}
+		
+		
+		#cityBtn {
+			float: right;
+			width: 12%;
+		}
+		
+		.mui-card-content img{
+			width: 100%;
+		}
+		
+		.shareBtn{
+				padding: 3px 5px;
+				top: 30% !important;
+				right: 8px !important;
+			}
+	</style>
+
+	<body>
+		<!--侧滑-->
+		<!-- 侧滑导航根容器 -->
+	<div class="mui-off-canvas-wrap mui-draggable">
+  <!-- 主页面容器 -->
+		  <div class="mui-inner-wrap">
+		     <!-- 菜单容器 -->
+		    <aside class="mui-off-canvas-left">
+		      <div class="mui-scroll-wrapper">
+		        <div class="mui-scroll">
+		          <!-- 菜单具体展示内容 -->
+		          	 <ul class="mui-table-view"> 
+				        <li class="mui-table-view-cell mui-collapse">
+				            <a class="mui-navigate-right" href="#">面板1</a>
+				            <div class="mui-collapse-content">
+				                <p>面板1子内容</p>
+				            </div>
+				        </li>
+				         <li class="mui-table-view-cell mui-collapse">
+				            <a class="mui-navigate-right" href="#">面板2</a>
+				            <div class="mui-collapse-content">
+				                <p>面板2子内容</p>
+				            </div>
+				        </li>
+				         <li class="mui-table-view-cell mui-collapse">
+				            <a class="mui-navigate-right" href="#">面板3</a>
+				            <div class="mui-collapse-content">
+				                <p>面板3子内容</p>
+				            </div>
+				        </li>
+				         <li class="mui-table-view-cell mui-collapse">
+				            <a class="mui-navigate-right" href="#">面板4</a>
+				            <div class="mui-collapse-content">
+				                <p>面板4子内容</p>
+				            </div>
+				        </li>
+				         <li class="mui-table-view-cell mui-collapse">
+				            <a class="mui-navigate-right" href="#">面板5</a>
+				            <div class="mui-collapse-content">
+				                <p>面板5子内容</p>
+				            </div>
+				        </li>
+				    </ul>
+		        </div>
+		      </div>
+		    </aside>
+		    <!-- 主页面标题 -->
+		    <header class="mui-bar mui-bar-nav">
+		      <a class="mui-icon mui-action-menu mui-icon-bars mui-pull-left"></a>
+		        <!-- 搜索框 -->
+		      <div class="mui-input-row mui-search mui-title">
+				    <input type="search" class="mui-input-clear" placeholder="">
+			  </div>
+			    <!-- 城市按钮 -->
+			  <button type="button" id="cityBtn" class="mui-btn mui-btn-blue mui-btn-block">城市</button>
+		    </header>
+		    <!-- 底部 -->
+		   <nav class="mui-bar mui-bar-tab">
+		        <a class="mui-tab-item mui-active">
+		            <span class="mui-icon mui-icon-home"></span>
+		            <span class="mui-tab-label">首页</span>
+		        </a>
+		        <a class="mui-tab-item">
+		            <span class="mui-icon mui-icon-phone"></span>
+		            <span class="mui-tab-label">电话</span>
+		        </a>
+		        <a class="mui-tab-item">
+		            <span class="mui-icon mui-icon-email"></span>
+		            <span class="mui-tab-label">邮件</span>
+		        </a>
+		        <a class="mui-tab-item">
+		            <span class="mui-icon mui-icon-gear"></span>
+		            <span class="mui-tab-label">设置</span>
+		        </a>
+		    </nav>
+		    <!-- 主页面内容容器 -->
+		    <div class="mui-content mui-scroll-wrapper">
+		      <div class="mui-scroll">
+		        <!-- 主界面具体展示内容 -->
+		        <!-- 轮播图-->
+				<div class="mui-slider">
+				  <div class="mui-slider-group mui-slider-loop">
+				    <!--支持循环，需要重复图片节点-->
+				    <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="img/4.jpg" /></a></div>
+				    <div class="mui-slider-item"><a href="#"><img src="img/1.jpg" /></a></div>
+				    <div class="mui-slider-item"><a href="#"><img src="img/2.jpg" /></a></div>
+				    <div class="mui-slider-item"><a href="#"><img src="img/3.jpg" /></a></div>
+				    <div class="mui-slider-item"><a href="#"><img src="img/4.jpg" /></a></div>
+				    <!--支持循环，需要重复图片节点-->
+				    <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="img/1.jpg" /></a></div>
+				  </div>
+			        <!-- 小圆点-->
+				  	<div class="mui-slider-indicator">
+						<div class="mui-indicator mui-active"></div>
+						<div class="mui-indicator"></div>
+						<div class="mui-indicator"></div>
+						<div class="mui-indicator"></div>
+					</div>
+				</div>
+			    <!-- 卡片视图-->
+			    <div class="mui-card">
+					<!--页眉，放置标题-->
+					<div class="mui-card-header mui-card-media">
+						<img src="img/logo.png" />
+						<div class="mui-media-body">
+							小M
+							<p>发表于 2016-06-30 15:30</p>
+						</div>
+					</div>
+					<!--内容区-->
+					<div class="mui-card-content">
+						<img src="img/b1.jpg"/>
+					</div>
+					<!--页脚，放置补充信息或支持的操作-->
+					<div class="mui-card-footer">林建冬</div>
+				</div>
+			    <div class="mui-card">
+					<!--页眉，放置标题-->
+					<div class="mui-card-header mui-card-media">
+						<img src="img/logo.png" />
+						<div class="mui-media-body">
+							小M
+							<p>发表于 2016-06-30 15:30</p>
+						</div>
+					</div>
+					<!--内容区-->
+					<div class="mui-card-content">
+						<img src="img/b2.jpg"/>
+					</div>
+					<!--页脚，放置补充信息或支持的操作-->
+					<div class="mui-card-footer">林建冬</div>
+				</div> 
+			    <div class="mui-card">
+				<!--页眉，放置标题-->
+				<div class="mui-card-header mui-card-media">
+					<img src="img/logo.png" />
+					<div class="mui-media-body">
+						小M
+						<p>发表于 2016-06-30 15:30</p>
+					</div>
+				</div>
+				<!--内容区-->
+				<div class="mui-card-content">
+					<img src="img/b3.png"/>
+				</div>
+				<!--页脚，放置补充信息或支持的操作-->
+				<div class="mui-card-footer">林建冬</div>
+			</div>  
+		      	<!-- 图文列表-->
+		      	<ul class="mui-table-view">
+				    <li class="mui-table-view-cell mui-media">
+				        <a href="javascript:;">
+				            <img class="mui-media-object mui-pull-left" src="img/shuijiao.jpg">
+				            <div class="mui-media-body">
+				                幸福
+				                <p class='mui-ellipsis'>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+				            </div>
+				        </a>
+				        <button type="button" class="mui-btn mui-btn-blue shareBtn">分享</button>
+				    </li>
+				    <li class="mui-table-view-cell mui-media">
+				        <a href="javascript:;">
+				            <img class="mui-media-object mui-pull-left" src="img/muwu.jpg">
+				            <div class="mui-media-body">
+				                木屋
+				                <p class='mui-ellipsis'>想要这样一间小木屋，夏天挫冰吃瓜，冬天围炉取暖.</p>
+				            </div>
+				        </a>
+				         <button type="button" class="mui-btn mui-btn-blue shareBtn">分享</button>
+				    </li>
+				    <li class="mui-table-view-cell mui-media">
+				        <a href="javascript:;">
+				            <img class="mui-media-object mui-pull-left" src="img/cbd.jpg">
+				            <div class="mui-media-body">
+				                CBD
+				                <p class='mui-ellipsis'>烤炉模式的城，到黄昏，如同打翻的调色盘一般.</p>
+				            </div>
+				        </a>
+				         <button type="button" class="mui-btn mui-btn-blue shareBtn">分享</button>
+				    </li>
+				</ul>
+		      </div>
+		    </div>  
+		  </div>
+	</div>
+		<!-- 操作表 （由于层级关系，要单独提出来）-->
+		<div id="sheet1" class="mui-popover mui-popover-bottom mui-popover-action ">
+	    <!-- 可选择菜单 -->
+	    <ul class="mui-table-view">
+	      <li class="mui-table-view-cell">
+	        <a href="#">分享</a>
+	      </li>
+	    </ul>
+	    <!-- 取消菜单 -->
+	    <ul class="mui-table-view">
+	      <li class="mui-table-view-cell">
+	        <a href="#sheet1"><b>取消</b></a>
+	      </li>
+	    </ul>
+	</div>
+	</body>
+
+	<script type="text/javascript">
+		 //搜索框
+		var search=document.querySelector('.mui-input-clear')	
+		search.addEventListener('tap',function(){
+			search.focus();
+		})
+		document.addEventListener('tap',function(){
+			search.blur();
+		})
+		
+		//选择器
+		var cityBtn=document.getElementById('cityBtn')
+		var picker = new mui.PopPicker({
+			layer: 2
+		});
+		picker.setData([{
+			value: '001',
+			text: '广东',
+			children: [{
+					value: "001",
+					text: "广州"
+				},
+				{
+					value: "002",
+					text: "深圳"
+				}
+			]
+		}, {
+			value: '002',
+			text: '福建',
+			children: [{
+					value: "001",
+					text: "福州"
+				},
+				{
+					value: "002",
+					text: "泉州"
+				}
+			]
+		}, {
+			value: '003',
+			text: '浙江',
+			children: [{
+					value: "001",
+					text: "杭州"
+				},
+				{
+					value: "002",
+					text: "绍兴"
+				}
+			]
+		}]);
+		cityBtn.addEventListener('tap', function() {
+			picker.show(function(selectItems) {
+				cityBtn.innerText = selectItems[1].text;
+			})
+		})
+		
+		//自动轮播
+		var gallery = mui('.mui-slider');
+			gallery.slider({
+			  interval:2000//自动轮播周期，若为0则不自动播放，默认为0；
+			});
+	
+		//区域滚动
+		mui('.mui-scroll-wrapper').scroll({
+			deceleration: 0.0005 //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
+		});
+	
+		//操作表的操作
+		mui('body').on('tap','.shareBtn',function(){
+			mui('#sheet1').popover('toggle');
+		})
+		
+		//侧滑按钮操作
+		var btns=document.querySelector('.mui-action-menu');
+		btns.addEventListener('tap',function(){
+			mui('.mui-off-canvas-wrap').offCanvas('show');
+		})
+		
+		//底部点击操作
+		var aNodes=document.querySelectorAll('.mui-tab-item');
+		aNodes[1].addEventListener('tap',function(){
+			var webview = mui.openWindow({
+				url:'phone.html',
+			});
+		});
+		
+	
+	</script>
+</html>
